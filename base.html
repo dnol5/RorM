@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Python Getting Started on Heroku</title>
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.2/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .jumbotron {
+        background-image: url("https://i.ytimg.com/vi/bRTZ9fk0akQ/maxresdefault.jpg");
+        color: white;
+        padding-bottom: 80px
+    }
+    .jumbotron .btn-primary {
+        background: rgba(0,0,0,0);
+        border-color: #000000;
+        color: #000000;
+    }
+    .jumbotron .btn-primary:hover {
+        background: white
+        
+    }
+    .jumbotron .btn-secondary {
+      background: rgba(0,0,0,0);
+        border-color: #000000;
+        color: #000000;
+    }
+    .jumbotron .btn-secondary:hover {
+        background: white
+        
+    }
+    .jumbotron p {
+        color: #000000;
+        max-width: 75%;
+        margin: 1em auto 2em
+    }
+    .jumbotron h1{
+      color: #000000;
+    }
+    .navbar+.jumbotron {
+        margin-top: -20px
+    }
+    .jumbotron .lang-logo {
+        display: block;
+        background: #b01302;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border: 2px solid white
+    }
+    .jumbotron .lang-logo img {
+        max-width: 100%
+    }
+
+
+  </style>
+</head>
+<body>
+
+
+{% block content %}{% endblock %}
+
+<script>
+  var el = document.getElementById("check-rick-morty-btn");
+  el.addEventListener("click", function(event){
+    var r = Math.random();
+    if(r < 0.85){
+      swal("Sucks... You're just a Morty");
+    }else{
+      swal("Sucks... You're a Rick");
+    }
+  })
+</script>
+
+
+</body>
+</html>
